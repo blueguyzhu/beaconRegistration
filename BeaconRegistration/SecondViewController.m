@@ -27,7 +27,7 @@
     [_deviceManager loadData];
     
     [_tableView setDelegate:self];
-    //[_tableView setDataSource:self];
+    [_tableView setDataSource:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,14 +76,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (!(_scanedCode && _scanedCode.length)) {
-        [_tableView setDataSource:nil];
-        [_tableView reloadData];
+        Ansatt *ansatt = [_deviceManager.ansattList objectAtIndex:indexPath.row];
+        if (ansatt.shortId && ansatt.shortId.length) {
+            [_deviceManager.ansattRecords removeObjectForKey:ansatt.shortId];
+            ansatt.shortId = NULL;
+            [_deviceManager updateAnsattInfo:ansatt];
+        }
+        [tableView reloadData];
         return;
     }
     
     Ansatt *ansatt = [_deviceManager.ansattList objectAtIndex:indexPath.row];
+    NSString *oldShortId = ansatt.shortId;
     ansatt.shortId = _scanedCode;
     [_deviceManager.ansattRecords setObject:ansatt forKey:ansatt.shortId];
+    if (oldShortId && oldShortId.length)
+        [_deviceManager.ansattRecords removeObjectForKey:oldShortId];
     
     //update DB
     BOOL suc = [_deviceManager updateAnsattInfo:ansatt];
@@ -92,7 +100,7 @@
     
     _scanedCode = nil;
     
-    [_tableView setDataSource:nil];
+//    [_tableView setDataSource:nil];
     [_tableView reloadData];
     
     //Update DB;
@@ -106,28 +114,6 @@
     
     [self createScannerView];
     [self presentViewController:_scannerViewController animated:YES completion:nil];
-}
-
-
-- (IBAction)showBtnPressed:(id)sender
-{
-    if (sender != _showBtn)
-        return;
-    
-    _scanedCode = nil;
-    [_tableView setDataSource:self];
-    [_tableView reloadData];
-}
-
-
-- (IBAction)cancelBtnPressed:(id)sender
-{
-    if (sender != _cancelBtn)
-        return;
-    
-    _scanedCode = nil;
-    [_tableView setDataSource:nil];
-    [_tableView reloadData];
 }
 
 
@@ -153,7 +139,7 @@
             
                 [weakSelf.scannerViewController dismissViewControllerAnimated:YES completion:nil];
             
-                [weakSelf.tableView setDataSource:weakSelf];
+//                [weakSelf.tableView setDataSource:weakSelf];
                 [weakSelf.tableView reloadData];
             }
             else {

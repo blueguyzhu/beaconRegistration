@@ -1,20 +1,18 @@
 //
-//  FirstViewController.m
+//  ItemOneViewController.m
 //  BeaconRegistration
 //
-//  Created by Wenlu Zhang on 17/09/14.
-//  Copyright (c) 2014 TEMPUS. All rights reserved.
+//  Created by Wenlu Zhang on 28/04/15.
+//  Copyright (c) 2015 TEMPUS. All rights reserved.
 //
-
-
 #define kUUID_STR                   @"f7826da6-4fa2-4e98-8024-bc5b71e0893e"
 
-#import "FirstViewController.h"
+#import "ItemOneViewController.h"
 #import "DeviceDataManager.h"
-#import "Ansatt.h"
 #import "ServerRequest.h"
 
-@interface FirstViewController ()
+
+@interface ItemOneViewController ()
 @property (nonatomic, strong) DeviceDataManager *deviceManager;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLBeaconRegion *monitoredRegion;
@@ -22,12 +20,11 @@
 @property (nonatomic, strong) NSMutableDictionary *beaconsState;
 @end
 
-@implementation FirstViewController
+@implementation ItemOneViewController
 
-- (void)viewDidLoad
-{
+- (void) viewDidLoad{
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     [WLLog setLogDest:DOC];
     [WLLog setLogLevel:ALL];
     [WLLog outputToStd:YES];
@@ -59,7 +56,7 @@
     _monitoredRegion.notifyOnEntry = YES;
     _monitoredRegion.notifyOnExit = YES;
     
-
+    
     [_locationManager startMonitoringForRegion:_monitoredRegion];
     //_broadcasting = YES;
     //[_broadcastSwitch setSelectedSegmentIndex:1];
@@ -68,12 +65,7 @@
     _registeredBeaconMajor = [[NSMutableArray alloc] init];
     _beaconsState = [[NSMutableDictionary alloc] init];
 
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 
@@ -183,6 +175,7 @@
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
             NSString *greetingMsg = [NSString stringWithFormat:@"%@ Register in %@", [formatter stringFromDate:date], ansatt.name];
+            greetingMsg = [NSString stringWithFormat:@"%@\n%@", _greetingTextView.text, greetingMsg];
             [_greetingTextView setText:greetingMsg];
         }
         else {
@@ -229,6 +222,7 @@
                 NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
                 [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
                 NSString *greetingMsg = [NSString stringWithFormat:@"%@ Register ut %@", [formatter stringFromDate:date], ansatt.name];
+                greetingMsg = [NSString stringWithFormat:@"%@\n%@", _greetingTextView.text, greetingMsg];
                 [_greetingTextView setText:greetingMsg];
             }
         }
@@ -323,7 +317,7 @@
     [dict setObject:@"1" forKey:@"Antall1"];
     [dict setObject:@"0" forKey:@"Antall2"];
     [dict setObject:@"0" forKey:@"Antall3"];
-
+    
     return dict;
 }
 
@@ -362,9 +356,11 @@
     [dict setObject:@"0" forKey:@"Antall1"];
     [dict setObject:@"1" forKey:@"Antall2"];
     [dict setObject:@"0" forKey:@"Antall3"];
-
+    
     return dict;
 }
+
+
 
 
 @end

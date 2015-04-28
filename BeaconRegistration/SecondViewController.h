@@ -12,14 +12,10 @@
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UIButton *scanBtn;
-@property (nonatomic, weak) IBOutlet UIButton *showBtn;
-@property (nonatomic, weak) IBOutlet UIButton *cancelBtn;
 @property (nonatomic, weak) IBOutlet UIButton *goBtn;
 
 
 -(IBAction)scanBtnPressed:(id)sender;
--(IBAction)showBtnPressed:(id)sender;
--(IBAction)cancelBtnPressed:(id)sender;
 -(IBAction)goBtnPressed:(id)sender;
 
 

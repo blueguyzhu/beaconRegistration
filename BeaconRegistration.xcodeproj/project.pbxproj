@@ -31,6 +31,10 @@
 		33F1073819CADC22005B7A87 /* NSDictionary+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1073719CADC22005B7A87 /* NSDictionary+URLEncoding.m */; };
 		33F1073B19CAED76005B7A87 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1073A19CAED76005B7A87 /* QRScannerViewController.m */; };
 		33F1073D19CAEF13005B7A87 /* QRScannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F1073C19CAEF13005B7A87 /* QRScannerView.xib */; };
+		66FEF7C21AEF69AE0079A11E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FEF7C11AEF69AE0079A11E /* Storyboard.storyboard */; };
+		66FEF7C51AEF87C10079A11E /* ItemTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEF7C41AEF87C10079A11E /* ItemTwoViewController.m */; };
+		66FEF7C71AEF94290079A11E /* ItemOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEF7C61AEF94290079A11E /* ItemOneViewController.m */; };
+		66FEF7CA1AEF9E660079A11E /* QRScannerView_P.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66FEF7C91AEF9E660079A11E /* QRScannerView_P.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,12 @@
 		33F1073919CAED76005B7A87 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		33F1073A19CAED76005B7A87 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 		33F1073C19CAEF13005B7A87 /* QRScannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScannerView.xib; sourceTree = "<group>"; };
+		66FEF7C11AEF69AE0079A11E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		66FEF7C31AEF86F50079A11E /* ItemTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTwoViewController.h; sourceTree = "<group>"; };
+		66FEF7C41AEF87C10079A11E /* ItemTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTwoViewController.m; sourceTree = "<group>"; };
+		66FEF7C61AEF94290079A11E /* ItemOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemOneViewController.m; sourceTree = "<group>"; };
+		66FEF7C81AEF943F0079A11E /* ItemOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemOneViewController.h; sourceTree = "<group>"; };
+		66FEF7C91AEF9E660079A11E /* QRScannerView_P.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScannerView_P.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +173,12 @@
 				33F1070B19C9C308005B7A87 /* Images.xcassets */,
 				33F106F719C9C308005B7A87 /* Supporting Files */,
 				33F1073C19CAEF13005B7A87 /* QRScannerView.xib */,
+				66FEF7C11AEF69AE0079A11E /* Storyboard.storyboard */,
+				66FEF7C31AEF86F50079A11E /* ItemTwoViewController.h */,
+				66FEF7C41AEF87C10079A11E /* ItemTwoViewController.m */,
+				66FEF7C61AEF94290079A11E /* ItemOneViewController.m */,
+				66FEF7C81AEF943F0079A11E /* ItemOneViewController.h */,
+				66FEF7C91AEF9E660079A11E /* QRScannerView_P.xib */,
 			);
 			path = BeaconRegistration;
 			sourceTree = "<group>";
@@ -269,6 +285,7 @@
 						};
 					};
 					33F1071019C9C308005B7A87 = {
+						DevelopmentTeam = 23G675726J;
 						TestTargetID = 33F106EC19C9C308005B7A87;
 					};
 				};
@@ -302,6 +319,8 @@
 				33F106FB19C9C308005B7A87 /* InfoPlist.strings in Resources */,
 				33F1073219CAD376005B7A87 /* beaconReg.db in Resources */,
 				33F1070419C9C308005B7A87 /* Main.storyboard in Resources */,
+				66FEF7CA1AEF9E660079A11E /* QRScannerView_P.xib in Resources */,
+				66FEF7C21AEF69AE0079A11E /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,11 +341,13 @@
 			files = (
 				33F1073519CADBBA005B7A87 /* ServerRequest.m in Sources */,
 				33F1073819CADC22005B7A87 /* NSDictionary+URLEncoding.m in Sources */,
+				66FEF7C71AEF94290079A11E /* ItemOneViewController.m in Sources */,
 				33F1070A19C9C308005B7A87 /* SecondViewController.m in Sources */,
 				3310196E19D2F75B003C28CD /* WLLog.m in Sources */,
 				33F1072B19CAB84A005B7A87 /* DeviceDataManager.m in Sources */,
 				33F1072E19CACD4B005B7A87 /* Ansatt.m in Sources */,
 				33F1070119C9C308005B7A87 /* AppDelegate.m in Sources */,
+				66FEF7C51AEF87C10079A11E /* ItemTwoViewController.m in Sources */,
 				33F1070719C9C308005B7A87 /* FirstViewController.m in Sources */,
 				33F106FD19C9C308005B7A87 /* main.m in Sources */,
 				33F1073B19CAED76005B7A87 /* QRScannerViewController.m in Sources */,
@@ -460,14 +481,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guang Yang (M6627MQ5XA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Guang Yang (M6627MQ5XA)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeaconRegistration/BeaconRegistration-Prefix.pch";
 				INFOPLIST_FILE = "BeaconRegistration/BeaconRegistration-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -477,14 +498,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guang Yang (M6627MQ5XA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Guang Yang (M6627MQ5XA)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeaconRegistration/BeaconRegistration-Prefix.pch";
 				INFOPLIST_FILE = "BeaconRegistration/BeaconRegistration-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -493,6 +514,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BeaconRegistration.app/BeaconRegistration";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -506,6 +529,7 @@
 				);
 				INFOPLIST_FILE = "BeaconRegistrationTests/BeaconRegistrationTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -515,6 +539,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BeaconRegistration.app/BeaconRegistration";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -524,6 +550,7 @@
 				GCC_PREFIX_HEADER = "BeaconRegistration/BeaconRegistration-Prefix.pch";
 				INFOPLIST_FILE = "BeaconRegistrationTests/BeaconRegistrationTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
