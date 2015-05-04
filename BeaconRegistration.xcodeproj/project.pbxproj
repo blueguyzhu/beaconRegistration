@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3310196E19D2F75B003C28CD /* WLLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3310196D19D2F75B003C28CD /* WLLog.m */; };
+		33C299A11AF82BAC004F206E /* bar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C299A01AF82BAC004F206E /* bar_bg.png */; };
 		33F106F119C9C308005B7A87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F106F019C9C308005B7A87 /* Foundation.framework */; };
 		33F106F319C9C308005B7A87 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F106F219C9C308005B7A87 /* CoreGraphics.framework */; };
 		33F106F519C9C308005B7A87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F106F419C9C308005B7A87 /* UIKit.framework */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		3310196D19D2F75B003C28CD /* WLLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLLog.m; path = WLLog/WLLog.m; sourceTree = "<group>"; };
 		3310196F19D2F773003C28CD /* WLLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLLog.h; sourceTree = "<group>"; };
+		33C299A01AF82BAC004F206E /* bar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_bg.png; sourceTree = "<group>"; };
 		33F106ED19C9C308005B7A87 /* BeaconRegistration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconRegistration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F106F019C9C308005B7A87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		33F106F219C9C308005B7A87 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -235,6 +237,7 @@
 		667C458E1AF7A18A00FA8030 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33C299A01AF82BAC004F206E /* bar_bg.png */,
 				667C458C1AF7A17B00FA8030 /* background.png */,
 			);
 			name = Resources;
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F1070C19C9C308005B7A87 /* Images.xcassets in Resources */,
+				33C299A11AF82BAC004F206E /* bar_bg.png in Resources */,
 				667C458D1AF7A17B00FA8030 /* background.png in Resources */,
 				33F1073D19CAEF13005B7A87 /* QRScannerView.xib in Resources */,
 				33F106FB19C9C308005B7A87 /* InfoPlist.strings in Resources */,

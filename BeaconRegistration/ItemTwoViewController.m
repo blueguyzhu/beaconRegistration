@@ -30,6 +30,8 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.hidden = YES;
+    
     _deviceManager = [DeviceDataManager sharedManager];
     [_deviceManager loadData];
     
@@ -45,12 +47,6 @@
     
     [self.view setBackgroundColor:[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     [_employeeTableView setBackgroundColor: [UIColor clearColor]];
-    
-
-    [self.tabBarController.view setBackgroundColor:[UIColor clearColor]];
-    for (UIView *v in [self.tabBarController.view subviews]) {
-        [v setBackgroundColor:[UIColor clearColor]];
-    }
 }
 
 
