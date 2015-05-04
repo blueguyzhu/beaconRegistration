@@ -42,6 +42,15 @@
     
     self.edgesForExtendedLayout = UIRectEdgeAll;
     _employeeTableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, CGRectGetHeight(self.tabBarController.tabBar.frame), 0.0f);
+    
+    [self.view setBackgroundColor:[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]]];
+    [_employeeTableView setBackgroundColor: [UIColor clearColor]];
+    
+
+    [self.tabBarController.view setBackgroundColor:[UIColor clearColor]];
+    for (UIView *v in [self.tabBarController.view subviews]) {
+        [v setBackgroundColor:[UIColor clearColor]];
+    }
 }
 
 
@@ -100,6 +109,8 @@
     cell = [tableView dequeueReusableCellWithIdentifier:cellName];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellName];
+        [cell setBackgroundColor:[UIColor clearColor]];
+        [cell.textLabel setTextColor:[UIColor whiteColor]];
     }
     
     Ansatt *ansatt = [_deviceManager.ansattList objectAtIndex:indexPath.row];

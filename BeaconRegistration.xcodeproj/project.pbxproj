@@ -31,6 +31,7 @@
 		33F1073819CADC22005B7A87 /* NSDictionary+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1073719CADC22005B7A87 /* NSDictionary+URLEncoding.m */; };
 		33F1073B19CAED76005B7A87 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1073A19CAED76005B7A87 /* QRScannerViewController.m */; };
 		33F1073D19CAEF13005B7A87 /* QRScannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F1073C19CAEF13005B7A87 /* QRScannerView.xib */; };
+		667C458D1AF7A17B00FA8030 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 667C458C1AF7A17B00FA8030 /* background.png */; };
 		66FEF7C21AEF69AE0079A11E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FEF7C11AEF69AE0079A11E /* Storyboard.storyboard */; };
 		66FEF7C51AEF87C10079A11E /* ItemTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEF7C41AEF87C10079A11E /* ItemTwoViewController.m */; };
 		66FEF7C71AEF94290079A11E /* ItemOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEF7C61AEF94290079A11E /* ItemOneViewController.m */; };
@@ -84,6 +85,7 @@
 		33F1073919CAED76005B7A87 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		33F1073A19CAED76005B7A87 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 		33F1073C19CAEF13005B7A87 /* QRScannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScannerView.xib; sourceTree = "<group>"; };
+		667C458C1AF7A17B00FA8030 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../background.png; sourceTree = "<group>"; };
 		66FEF7C11AEF69AE0079A11E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		66FEF7C31AEF86F50079A11E /* ItemTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTwoViewController.h; sourceTree = "<group>"; };
 		66FEF7C41AEF87C10079A11E /* ItemTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTwoViewController.m; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		33F106F619C9C308005B7A87 /* BeaconRegistration */ = {
 			isa = PBXGroup;
 			children = (
+				667C458E1AF7A18A00FA8030 /* Resources */,
 				33F1072819CAB824005B7A87 /* Models */,
 				33F106FF19C9C308005B7A87 /* AppDelegate.h */,
 				33F1070019C9C308005B7A87 /* AppDelegate.m */,
@@ -227,6 +230,14 @@
 				33F1072D19CACD4B005B7A87 /* Ansatt.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		667C458E1AF7A18A00FA8030 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				667C458C1AF7A17B00FA8030 /* background.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F1070C19C9C308005B7A87 /* Images.xcassets in Resources */,
+				667C458D1AF7A17B00FA8030 /* background.png in Resources */,
 				33F1073D19CAEF13005B7A87 /* QRScannerView.xib in Resources */,
 				33F106FB19C9C308005B7A87 /* InfoPlist.strings in Resources */,
 				33F1073219CAD376005B7A87 /* beaconReg.db in Resources */,

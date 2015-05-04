@@ -65,6 +65,7 @@
     _registeredBeaconMajor = [[NSMutableArray alloc] init];
     _beaconsState = [[NSMutableDictionary alloc] init];
 
+    [self.view setBackgroundColor:[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
 }
 

@@ -14,6 +14,9 @@
 {
     // Override point for customization after application launch.
     [self checkAndCreateDatabase];
+    
+    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:0.5]];
+    [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
     return YES;
 }
 							
