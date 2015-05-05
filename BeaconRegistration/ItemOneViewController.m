@@ -170,20 +170,27 @@
         
         [WLLog logWithLevel:INFO withTime:nil withContent:@"Find new registered beacon with major: %@, minor: %@, short id: %@. Start to register in server...", beacon.major,
          beacon.minor, shortId];
+        
+        NSDate *date = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+        
         NSDictionary *registerInfo = [self registerInfo:ansatt.num];
         if ([ServerRequest registerCustomer:registerInfo]) {
             [WLLog logWithLevel:INFO withTime:nil withContent:@"Register beacon with short id: %@ INN successfully", shortId];
             [_registeredBeaconMajor addObject:beacon.major];
             [_beaconsState setObject:[NSNumber numberWithInteger:0] forKey:beacon.major];
-            NSDate *date = [NSDate date];
-            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-            [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+
             NSString *greetingMsg = [NSString stringWithFormat:@"%@ Register in %@", [formatter stringFromDate:date], ansatt.name];
+            /*
             greetingMsg = [NSString stringWithFormat:@"%@\n%@", _greetingTextView.text, greetingMsg];
             [_greetingTextView setText:greetingMsg];
-            [_greetingTextView setTextColor:[UIColor whiteColor]];
+            [_greetingTextView setTextColor:[UIColor whiteColor]];*/
+            [self writeMsg:greetingMsg];
         }
         else {
+            NSString *content = [NSString stringWithFormat:@"%@ Registreringen mislykkes %@", [formatter stringFromDate:date], ansatt.name];
+            [self writeMsg:content];
             [WLLog logWithLevel:ERROR withTime:nil withContent:@"Register beaocon with short id: %@ INN failed", shortId];
         }
     }
@@ -217,19 +224,26 @@
 #else
             BOOL suc = [ServerRequest goodbyeCustomer:registerInfo];
 #endif
+            
+            NSDate *date = [NSDate date];
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
             if (!suc){
+                NSString *content = [NSString stringWithFormat:@"%@ Registreringen mislykkes %@", [formatter stringFromDate:date], ansatt.name];
+                [self writeMsg:content];
                 [WLLog logWithLevel:ERROR withTime:nil withContent:@"Register beacon with short id: %@ UT failed.", shortId];
                 [tempBeaconsState setObject:[NSNumber numberWithInteger:count] forKey:major];
             }
             else{
                 [WLLog logWithLevel:ERROR withTime:nil withContent:@"Register beacon with short id: %@ UT successfully.", shortId];
-                NSDate *date = [NSDate date];
-                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+      
                 NSString *greetingMsg = [NSString stringWithFormat:@"%@ Register ut %@", [formatter stringFromDate:date], ansatt.name];
+                /*
                 greetingMsg = [NSString stringWithFormat:@"%@\n%@", _greetingTextView.text, greetingMsg];
                 [_greetingTextView setText:greetingMsg];
                 [_greetingTextView setTextColor:[UIColor whiteColor]];
+                 */
+                [self writeMsg:greetingMsg];
 
             }
         }
@@ -365,6 +379,21 @@
     [dict setObject:@"0" forKey:@"Antall3"];
     
     return dict;
+}
+
+
+- (void) writeMsg: (NSString *)msg {
+    NSString *greetingMsg = nil;
+    if (_latestTextLabel.text && _latestTextLabel.text.length)
+        greetingMsg = _latestTextLabel.text;
+    
+    [_latestTextLabel setText:msg];
+    
+    if (greetingMsg) {
+        greetingMsg = [NSString stringWithFormat:@"%@\n%@", greetingMsg, _greetingTextView.text];
+        [_greetingTextView setText:greetingMsg];
+        [_greetingTextView setTextColor:[UIColor whiteColor]];
+    }
 }
 
 

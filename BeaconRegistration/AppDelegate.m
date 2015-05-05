@@ -16,7 +16,7 @@
     [self checkAndCreateDatabase];
     
     [[UITabBar appearance] setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bar_bg.png"]]];
-//    [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1.0f]} forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont boldSystemFontOfSize:10.0f]} forState:UIControlStateSelected];

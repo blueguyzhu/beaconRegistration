@@ -64,7 +64,7 @@
                             <constraint firstItem="avO-zz-2Be" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="oFd-1n-Og9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="First" image="event" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="greetingTextView" destination="A5M-7J-77L" id="eO8-fK-7j5"/>
                     </connections>
@@ -152,7 +152,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="event" width="36" height="36"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
