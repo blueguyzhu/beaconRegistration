@@ -65,6 +65,9 @@
     _registeredBeaconMajor = [[NSMutableArray alloc] init];
     _beaconsState = [[NSMutableDictionary alloc] init];
 
+    [_logoImgView setContentMode:UIViewContentModeScaleAspectFit];
+    
+    
     [self.view setBackgroundColor:[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
 }
@@ -178,6 +181,7 @@
             NSString *greetingMsg = [NSString stringWithFormat:@"%@ Register in %@", [formatter stringFromDate:date], ansatt.name];
             greetingMsg = [NSString stringWithFormat:@"%@\n%@", _greetingTextView.text, greetingMsg];
             [_greetingTextView setText:greetingMsg];
+            [_greetingTextView setTextColor:[UIColor whiteColor]];
         }
         else {
             [WLLog logWithLevel:ERROR withTime:nil withContent:@"Register beaocon with short id: %@ INN failed", shortId];
@@ -225,6 +229,8 @@
                 NSString *greetingMsg = [NSString stringWithFormat:@"%@ Register ut %@", [formatter stringFromDate:date], ansatt.name];
                 greetingMsg = [NSString stringWithFormat:@"%@\n%@", _greetingTextView.text, greetingMsg];
                 [_greetingTextView setText:greetingMsg];
+                [_greetingTextView setTextColor:[UIColor whiteColor]];
+
             }
         }
         else{

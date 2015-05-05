@@ -11,7 +11,8 @@
 @interface ItemTwoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *employeeTableView;
+@property (nonatomic, weak) IBOutlet UIButton *scanBtn;
 
-
+- (IBAction)scanBtnPressed:(id)sender;
 
 @end

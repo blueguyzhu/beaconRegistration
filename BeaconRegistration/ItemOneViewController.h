@@ -14,6 +14,7 @@
 
 
 @interface ItemOneViewController : UIViewController <CLLocationManagerDelegate>
+@property (nonatomic, weak) IBOutlet UIImageView *logoImgView;
 @property (nonatomic, weak) IBOutlet UITextView *greetingTextView;
 @end
 

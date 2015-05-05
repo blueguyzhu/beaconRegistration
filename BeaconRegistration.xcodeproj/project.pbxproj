@@ -32,6 +32,10 @@
 		33F1073819CADC22005B7A87 /* NSDictionary+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1073719CADC22005B7A87 /* NSDictionary+URLEncoding.m */; };
 		33F1073B19CAED76005B7A87 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1073A19CAED76005B7A87 /* QRScannerViewController.m */; };
 		33F1073D19CAEF13005B7A87 /* QRScannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F1073C19CAEF13005B7A87 /* QRScannerView.xib */; };
+		664100BC1AF8A4F000F7B6B6 /* ibeacon_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 664100BB1AF8A4F000F7B6B6 /* ibeacon_logo.png */; };
+		664100BE1AF8A85D00F7B6B6 /* users_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 664100BD1AF8A85D00F7B6B6 /* users_icon.png */; };
+		664100C01AF8AD7400F7B6B6 /* QR-code.png in Resources */ = {isa = PBXBuildFile; fileRef = 664100BF1AF8AD7400F7B6B6 /* QR-code.png */; };
+		665D272C1AF89B0300C302E7 /* white_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 665D272B1AF89B0300C302E7 /* white_logo.png */; };
 		667C458D1AF7A17B00FA8030 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 667C458C1AF7A17B00FA8030 /* background.png */; };
 		66FEF7C21AEF69AE0079A11E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FEF7C11AEF69AE0079A11E /* Storyboard.storyboard */; };
 		66FEF7C51AEF87C10079A11E /* ItemTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FEF7C41AEF87C10079A11E /* ItemTwoViewController.m */; };
@@ -87,6 +91,10 @@
 		33F1073919CAED76005B7A87 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		33F1073A19CAED76005B7A87 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 		33F1073C19CAEF13005B7A87 /* QRScannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScannerView.xib; sourceTree = "<group>"; };
+		664100BB1AF8A4F000F7B6B6 /* ibeacon_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ibeacon_logo.png; sourceTree = "<group>"; };
+		664100BD1AF8A85D00F7B6B6 /* users_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users_icon.png; sourceTree = "<group>"; };
+		664100BF1AF8AD7400F7B6B6 /* QR-code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QR-code.png"; sourceTree = "<group>"; };
+		665D272B1AF89B0300C302E7 /* white_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_logo.png; sourceTree = "<group>"; };
 		667C458C1AF7A17B00FA8030 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../background.png; sourceTree = "<group>"; };
 		66FEF7C11AEF69AE0079A11E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		66FEF7C31AEF86F50079A11E /* ItemTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTwoViewController.h; sourceTree = "<group>"; };
@@ -237,6 +245,10 @@
 		667C458E1AF7A18A00FA8030 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				664100BD1AF8A85D00F7B6B6 /* users_icon.png */,
+				664100BF1AF8AD7400F7B6B6 /* QR-code.png */,
+				664100BB1AF8A4F000F7B6B6 /* ibeacon_logo.png */,
+				665D272B1AF89B0300C302E7 /* white_logo.png */,
 				33C299A01AF82BAC004F206E /* bar_bg.png */,
 				667C458C1AF7A17B00FA8030 /* background.png */,
 			);
@@ -331,12 +343,16 @@
 				33F1070C19C9C308005B7A87 /* Images.xcassets in Resources */,
 				33C299A11AF82BAC004F206E /* bar_bg.png in Resources */,
 				667C458D1AF7A17B00FA8030 /* background.png in Resources */,
+				664100BC1AF8A4F000F7B6B6 /* ibeacon_logo.png in Resources */,
+				664100BE1AF8A85D00F7B6B6 /* users_icon.png in Resources */,
 				33F1073D19CAEF13005B7A87 /* QRScannerView.xib in Resources */,
 				33F106FB19C9C308005B7A87 /* InfoPlist.strings in Resources */,
+				665D272C1AF89B0300C302E7 /* white_logo.png in Resources */,
 				33F1073219CAD376005B7A87 /* beaconReg.db in Resources */,
 				33F1070419C9C308005B7A87 /* Main.storyboard in Resources */,
 				66FEF7CA1AEF9E660079A11E /* QRScannerView_P.xib in Resources */,
 				66FEF7C21AEF69AE0079A11E /* Storyboard.storyboard in Resources */,
+				664100C01AF8AD7400F7B6B6 /* QR-code.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

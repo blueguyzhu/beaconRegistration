@@ -35,6 +35,7 @@
     _deviceManager = [DeviceDataManager sharedManager];
     [_deviceManager loadData];
     
+    /*
     _rightBarBtn = [[UIBarButtonItem alloc]
                     initWithTitle:@"+"
                     style:UIBarButtonItemStylePlain
@@ -44,6 +45,9 @@
     
     self.edgesForExtendedLayout = UIRectEdgeAll;
     _employeeTableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, CGRectGetHeight(self.tabBarController.tabBar.frame), 0.0f);
+     */
+    
+    //[_scanBtn addTarget:self action:@selector(scanBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view setBackgroundColor:[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     [_employeeTableView setBackgroundColor: [UIColor clearColor]];
@@ -107,6 +111,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellName];
         [cell setBackgroundColor:[UIColor clearColor]];
         [cell.textLabel setTextColor:[UIColor whiteColor]];
+        [cell.detailTextLabel setTextColor:[UIColor whiteColor]];
     }
     
     Ansatt *ansatt = [_deviceManager.ansattList objectAtIndex:indexPath.row];
@@ -123,7 +128,7 @@
 
 #pragma mark - IBAction methods
 - (IBAction)scanBtnPressed:(id)sender{
-    if (sender != self.rightBarBtn)
+    if (sender != self.scanBtn)
         return;
     
     [self createScannerView];
